@@ -105,7 +105,7 @@ To view your application go to your specified link or call this command below.
 heroku open
 ```
 
-###Making Edits to your React Application
+### Making Edits to your React Application
 
 So now your React application is deployed and we might want to keep working on it. You can easily do so on whatever environment that you choose. When the time is ready simply stage the files you want to.
 
