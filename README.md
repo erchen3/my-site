@@ -1,4 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Personal Notes
+  My project leveraged multiple pages with react and getting it to deploy was a bit troublesome but the instructions will be listed below as to how to get that done in case you forget or for anyone else. Assuming you've done the initial set-up process  using create-react-app, it should look like this first. Note my-app is an ARBITRARY name, left for you to name.
+  ```
+  npm init react-app my-app
+  cd my-app
+  ```
+ Now after going into the folder, create a new git repository.
+ 
+ ```
+ git init
+ ```
+ Then what you want to do is call the command below which essentially is responsible for helping you deploy properly.
+ ```
+ heroku create my-app --buildpack mars/create-react-app
+ ```
+ Then stage all files in the current directory (Should be in the the folder of your react applcication).
+ ```
+ git add .
+ ```
+ Then you want to save your changes to a local repository. I recommend the -m option for the sake of having some description.
+ 
+ ```
+ git commit -m "React application to be deployed onto Heroku."
+ 
+ 
+ 
+ ```
+
+Then you want to push to the remote repo 'heroku'. This step essentially will finish your deploying.
+
+```
+git push heroku master
+```
+To view your application go to your specified link or call this command below.
+```
+heroku open
+```
+
+### Making Edits to your React Application
+
+So now your React application is deployed and we might want to keep working on it. You can easily do so on whatever environment that you choose. When the time is ready simply stage the files you want to.
+
+```
+ git add <Some File you want to stage>
+```
+Then save your changes to the local repo.
+```
+git commit -m "Some new change"
+```
+Lastly, push to the remote repo, essentially updating your React application. Once this step clears you can view the changes if they worked.
+```
+git push heroku master
+```
+
+
+I wrote out the steps so it would be easier to view above but credit belongs to the author's of the links provided below.
+### Useful Links for me
+1) https://github.com/mars/create-react-app-buildpack
+2) https://coderwall.com/p/-oolga/how-to-update-your-heroku-app
+
 
 ## Available Scripts
 
@@ -67,62 +126,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-### Personal Notes
-  My project leveraged multiple pages with react and getting it to deploy was a bit troublesome but the instructions will be listed below as to how to get that done in case you forget or for anyone else. Assuming you've done the initial set-up process  using create-react-app, it should look like this first. Note my-app is an ARBITRARY name, left for you to name.
-  ```
-  npm init react-app my-app
-  cd my-app
-  ```
- Now after going into the folder, create a new git repository.
- 
- ```
- git init
- ```
- Then what you want to do is call the command below which essentially is responsible for helping you deploy properly.
- ```
- heroku create my-app --buildpack mars/create-react-app
- ```
- Then stage all files in the current directory (Should be in the the folder of your react applcication).
- ```
- git add .
- ```
- Then you want to save your changes to a local repository. I recommend the -m option for the sake of having some description.
- 
- ```
- git commit -m "React application to be deployed onto Heroku."
- 
- 
- 
- ```
 
-Then you want to push to the remote repo 'heroku'. This step essentially will finish your deploying.
-
-```
-git push heroku master
-```
-To view your application go to your specified link or call this command below.
-```
-heroku open
-```
-
-### Making Edits to your React Application
-
-So now your React application is deployed and we might want to keep working on it. You can easily do so on whatever environment that you choose. When the time is ready simply stage the files you want to.
-
-```
- git add <Some File you want to stage>
-```
-Then save your changes to the local repo.
-```
-git commit -m "Some new change"
-```
-Lastly, push to the remote repo, essentially updating your React application. Once this step clears you can view the changes if they worked.
-```
-git push heroku master
-```
-
-
-I wrote out the steps so it would be easier to view above but credit belongs to the author's of the links provided below.
-### Useful Links for me
-1) https://github.com/mars/create-react-app-buildpack
-2) https://coderwall.com/p/-oolga/how-to-update-your-heroku-app
