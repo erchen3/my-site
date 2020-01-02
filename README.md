@@ -105,6 +105,23 @@ To view your application go to your specified link or call this command below.
 heroku open
 ```
 
+#Making Edits to your React Application
+
+So now your React application is deployed and we might want to keep working on it. You can easily do so on whatever environment that you choose. When the time is ready simply stage the files you want to.
+
+```
+ git add <Some File you want to stage>
+```
+Then save your changes to the local repo.
+```
+git commit -m "Some new change"
+```
+Lastly, push to the remote repo, essentially updating your React application. Once this step clears you can view the changes if they worked.
+```
+git push heroku master
+```
+
+
 ### Useful Links for me
 1) https://github.com/mars/create-react-app-buildpack
 2) https://coderwall.com/p/-oolga/how-to-update-your-heroku-app
