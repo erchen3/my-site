@@ -22,9 +22,8 @@ function About() {
             implementing additional features to simulate SATCOM operations on an
             existing application. This application is an interactive graphical
             user interface that enables clients to manage satellite
-            communication lines. Furthermore, my partner and I tackled the
-            implementation of a database using SQL Server for the application
-            from scratch working in C# and leveraging the entity framework.
+            communication lines. Furthermore, my partner and I worked together to architect and implement a database using SQL Server for the application
+           in C# and leveraging the entity framework.
           </p>
         </div>
       </div>
